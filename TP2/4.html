@@ -1,0 +1,38 @@
+
+<!-- Créer une page HTML contenant une div de 50 px sur 50px avec un fond rose.
+    Avec un event, faite en sorte de pouvoir déplacer la div avec les touches fléchées de votre clavier.-->
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <div style="
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: lightpink;
+            top:100px;
+	        left:100px;">
+        </div>
+    </body>
+
+    <script>
+        let square = document.getElementsByTagName('div')[ 0 ];
+        window.addEventListener('keydown', ( key ) => {
+            switch ( key.key ) {
+                case 'ArrowLeft':
+                    square.style.left = parseInt( square.style.left ) - 10 + 'px';
+                    break;
+                case 'ArrowRight':
+                    square.style.left = parseInt( square.style.left ) + 10 + 'px';
+                    break;
+                case 'ArrowUp':
+                    square.style.top = parseInt( square.style.top ) - 10 + 'px';
+                    break;
+                case 'ArrowDown':
+                    square.style.top = parseInt( square.style.top ) + 10 + 'px';
+                    break;
+                }
+        });
+
+    </script>
+</html>

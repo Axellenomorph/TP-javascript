@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+
+    <script>
+        /* Coder un script qui permet d’ajouter un élément div avec un fond violet, une largeur de 100% et une hauteur de
+        300px. Créer un autre élément “h1” avec une couleur de texte blanche, en majuscule. Attacher l’élément H1 à l’
+        élément div. */
+        let div = document.createElement( 'div' );
+        div.style.backgroundColor = "purple";
+        div.style.width = "100%";
+        div.style.height = "300px";
+        document.body.appendChild( div );
+
+        let title = document.createElement( 'h1', [] );
+        title.style.color = "white";
+        title.innerHTML = "mon super titre".toLocaleUpperCase();
+        document.getElementsByTagName( 'div' )[ 0 ].appendChild( title );
+    </script>
+</body>

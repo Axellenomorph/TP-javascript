@@ -1,0 +1,22 @@
+
+<!-- Créer une page HTML avec 2 images. 
+    Lorsque vous cliquez sur une des deux images, la largeur de l’image cliquée augmente de 20% 
+    de sa largeur actuelle et la largeur de l’autre image diminue de 20% de sa largeur actuelle.
+    Attention : la largeur ne peut pas être négative.-->
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <img onclick="enlarge( this )" src="https://i.pinimg.com/originals/ec/1a/1a/ec1a1a3005db98eccbe2dfdf1bffb577.jpg">
+        <img onclick="enlarge( this )" src="https://pbs.twimg.com/media/D6VdD-nU8AAdyt_.jpg">
+
+    </body>
+
+    <script>
+        function enlarge( img ) {
+           img.style.transform = "scale(1.2)";
+           Array.from( document.getElementsByTagName('img'))
+           .find(( i ) => i !== img ).style.transform = "scale(0.80)";
+        }
+    </script>
+</html>

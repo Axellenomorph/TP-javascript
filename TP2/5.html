@@ -1,0 +1,21 @@
+
+<!-- Créer une page HTML avec plusieurs images, au survol d’une image faites un zoom x3 sur cette image. -->
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <img onmouseover="zoooom( this )" onmouseleave="dezoooom( this )" src="https://i.pinimg.com/originals/ec/1a/1a/ec1a1a3005db98eccbe2dfdf1bffb577.jpg">
+        <img onmouseover="zoooom( this )" onmouseleave="dezoooom( this )" src="https://pbs.twimg.com/media/D6VdD-nU8AAdyt_.jpg">
+        <img onmouseover="zoooom( this )" onmouseleave="dezoooom( this )" src="https://pbs.twimg.com/media/FL1Z4D2aQAIlO2w?format=jpg&name=medium" alt="">        
+    </body>
+
+    <script>
+        function zoooom( img ) {
+            img.style.transform = "scale(3)";
+        }
+        
+        function dezoooom( img ) {
+            img.style.transform = "scale(1)";
+        }
+    </script>
+</html>

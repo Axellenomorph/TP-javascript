@@ -1,0 +1,14 @@
+<!-- Créer une page HTML avec une image. Lorsque vous cliquez sur cette image elle pivote dans le sens des aiguilles d’une montre de 90°. -->
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <img onclick="pivot( this )" src="https://i.pinimg.com/originals/ec/1a/1a/ec1a1a3005db98eccbe2dfdf1bffb577.jpg" alt="">
+    </body>
+
+    <script>
+        function pivot(image) {
+            image.style.transform = "rotate(90deg)";
+        }
+    </script>
+</html>

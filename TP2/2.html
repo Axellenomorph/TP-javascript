@@ -1,0 +1,19 @@
+
+<!-- Crréer une page HTML avec une liste contenant des noms de ville. Au clic d’un élément de la liste, remonter l’ élément en haut de la liste.-->
+<!doctype html>
+<html>
+    <head></head>
+    <body>
+        <ul>
+            <li onclick="topOfList(this)">Paris</li>
+            <li onclick="topOfList(this)">Rouen</li>
+            <li onclick="topOfList(this)">Lille</li>
+        </ul>
+    </body>
+
+    <script>
+        function topOfList( li ) {
+            li.parentElement.prepend( li );
+        }
+    </script>
+</html>

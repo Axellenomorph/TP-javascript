@@ -1,0 +1,33 @@
+
+
+<!doctype html>
+<html>
+
+   
+
+
+    <head></head>
+    <body>
+        <ul>
+        </ul>
+    </body>
+    <script>
+         /* Créer une page HTML avec une liste “Toto” “Tata” “Titi” “Tutu”. Créer un nouvel élément li et remplacer le 2ème
+        élément de la liste par le nouvel élément */
+        let list = document.getElementsByTagName( 'ul' )[ 0 ];
+        let array = ['Toto', 'Tata', 'Tutu'];
+
+        array.forEach(( value ) => {
+            let li = document.createElement('li');
+            li.innerHTML = value;
+            list.appendChild( li );
+        });
+
+        let newLi = document.createElement('li');
+        newLi.innerHTML = "MIAOU";
+        list.replaceChild( newLi, document.getElementsByTagName( 'li' )[ 1 ] );
+        // OR THIS :  document.getElementsByTagName( 'li' )[ 1 ].replaceWith( newLi );
+
+    </script>
+</html>
+
