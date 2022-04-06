@@ -1,0 +1,36 @@
+<!-- Créer une page HTML, coder un script qui permet d'enregistrer les touches tapées par l’utilisateur sous forme de 
+liste. Chaque fois qu’une touche est pressée sur le clavier, le nom de la touche sera ajoutée une liste ul. La liste ne 
+doit pas faire plus de 20 entrées, si jamais la liste est plus longue vous pouvez enlever les éléments les plus 
+anciens -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>hello</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+
+    <div>
+        <ul id="list">
+
+        </ul>
+    </div>
+
+	<script>
+
+        document.addEventListener( "keypress", function ( event ) {
+            const ul = document.getElementById('list');
+            const e = document.createElement('li');
+            e.innerHTML = `${event.key}`;
+            ul.appendChild( e );
+            if ( ul.getElementsByTagName('li').length > 20 ) {
+                const last = Array.from( ul.getElementsByTagName('li'))[ 0 ];
+                last.remove();
+            }
+        });
+	</script>
+</body>
+
+</html>

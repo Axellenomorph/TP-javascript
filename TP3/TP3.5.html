@@ -1,0 +1,31 @@
+<!-- Créer une page HTML qui affiche la taille de la fenêtre dynamiquement.
+    Lorsque vous redimensionner la page, la largeur et la hauteur en pixel sont affichés.-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>hello</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+
+    <div>
+        <span id="width"></span> BY <span id="height"></span>
+    </div>
+
+	<script>
+        document.getElementById("width").innerHTML = `${ window.innerWidth }px`;
+        document.getElementById("height").innerHTML = `${ window.innerHeight }px`;
+
+        window.addEventListener('resize', function ( event ) {
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            document.getElementById("width").innerHTML = `${ width }px`
+            document.getElementById("height").innerHTML = `${ height }px`
+
+        })
+	</script>
+</body>
+
+</html>

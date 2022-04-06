@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>hello</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+
+	<script>
+
+        const incr = Math.floor( Math.random() * ( 16 - 5 ) + 5 );
+        for ( let i = 0; i <= incr ; ++i ) {
+            const e = document.createElement('div');
+            e.style.height = '50px';
+            e.style.width = '100%';
+            e.style.marginBottom = "5px";
+            e.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);;
+            document.body.appendChild(e)
+            console.log(i)
+        };
+
+        document.querySelectorAll('div').forEach(( div ) => {
+            div.addEventListener( "click", function ( event ) {
+            const clicked = event.target.style.backgroundColor;
+                if( clicked !== "red" ) {
+                    event.target.setAttribute( 'data-old-color', event.target.style.backgroundColor );
+                    event.target.style.backgroundColor = 'red';
+                } else {
+                    event.target.style.backgroundColor = event.target.getAttribute('data-old-color')
+                }
+            })
+        })
+
+	</script>
+</body>
+
+</html>
